@@ -1,0 +1,14 @@
+#+TITLE: drove
+
+* Drove
+~drove~ is a "cargo init" for hare, it's able to create all the scaffolding for
+a hare project following the [[https://harelang.org/documentation/usage/project-structure.html][standard conventios]] and nothing else.
+~drove~ isn't able to manage your dependencies for you, nor is a build
+system, it's just a simple way to create some structure for your project
+
+* Building
+#+begin_src shell
+  make
+  make install
+#+end_src
+
