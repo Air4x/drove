@@ -10,17 +10,17 @@ BINDIR=$(PREFIX)/bin
 all: cmd
 
 cmd:
-	$HARE) build $(HAREFLAGS) -o $@ cmd/$@/
+	$(HARE) build $(HAREFLAGS) -o drove cmd/drove/main.ha
 
 check:
 	$(HARE) test $(HAREFLAGS)
 clean:
-	 rm -f cmd
+	 rm -f drove
 
 install:
-	install -Dm755 cmd $(DESTDIR)$(BINDIR)/cmd
+	install -Dm755 drove $(DESTDIR)$(BINDIR)/drove
 
 uninstall:
-	rm -f $(DESTDIR)$(BINDIR)/cmd
+	rm -f $(DESTDIR)$(BINDIR)/drove
 
 .PHONY: all check clean install uninstall
