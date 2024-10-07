@@ -7,9 +7,9 @@ DESTDIR=
 PREFIX=/usr/local
 BINDIR=$(PREFIX)/bin
 
-all: cmd
+all: drove
 
-cmd:
+drove:
 	$(HARE) build $(HAREFLAGS) -o drove cmd/drove/main.ha
 
 check:
