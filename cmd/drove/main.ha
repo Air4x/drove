@@ -26,7 +26,7 @@ export fn main() void = {
 };
        
 
-fn make_files(name) void = {
+fn make_files(name: str) void = {
 	let mode = fs::mode::USER_RW;
 	let flag = fs::flag::WRONLY;
 	// Creating README.md, adding some text just not to have a
@@ -43,7 +43,7 @@ fn make_files(name) void = {
 	defer free(copying_path);
 	let copying_file = os::create(copying_path, mode, flag)!;
 	defer io::close(copying_file)!;
-	io::write(copying_file, "add your license here");
+	io::write(copying_file, strings::toutf8("add your license here"))!;
 	
 };
 
