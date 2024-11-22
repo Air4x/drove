@@ -1,0 +1,34 @@
+* NAME
+drove, a cargo-init clone for hare
+* SYNOPSIS
+drove OPTIONS NAME
+-b    make the scaffolding for a binary project
+-m    make the scaffolding for a module project
+* Description
+~drove~ is a "cargo-init" clone for hare. It exists to
+create all the necessary scaffolding for a hare project,
+will it be a binary program or a module.
+For now it just creates a Makefile and a series of
+directories.
+* EXAMPLES
+~drove -b hello~
+Will create a directory named "hello" with this structure:
+hello
+│
+├ Makefile
+│
+├ doc
+│   └╴hello
+├ cmd
+├ example
+├ scripts
+└ internals
+
+* SEE ALSO
+The official documentation on the hare website: https://harelang.org/documentation/usage/project-structure.html
+
+* BUGS
+There aren't know bugs, just missing features
+
+* AUTHOR
+Mario Calcagno (mario.calcagno@protonmail.com)

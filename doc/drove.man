@@ -1,0 +1,39 @@
+.TH "" "1" 
+.SH "NAME"
+.PP
+drove, a cargo-init clone for hare
+.SH "SYNOPSIS"
+.PP
+drove OPTIONS NAME
+-b    make the scaffolding for a binary project
+-m    make the scaffolding for a module project
+.SH "Description"
+.PP
+\fCdrove\fP is a "cargo-init" clone for hare. It exists to
+create all the necessary scaffolding for a hare project,
+will it be a binary program or a module.
+For now it just creates a Makefile and a series of
+directories.
+.SH "EXAMPLES"
+.PP
+\fCdrove \-b hello\fP
+Will create a directory named "hello" with this structure:
+hello
+│
+├ Makefile
+│
+├ doc
+│   └╴hello
+├ cmd
+├ example
+├ scripts
+└ internals
+.SH "SEE ALSO"
+.PP
+The official documentation on the hare website: \fIhttps://harelang.org/documentation/usage/project-structure.html\fP
+.SH "BUGS"
+.PP
+There aren't know bugs, just missing features
+.SH "AUTHOR"
+.PP
+Mario Calcagno (mario.calcagno@protonmail.com)
